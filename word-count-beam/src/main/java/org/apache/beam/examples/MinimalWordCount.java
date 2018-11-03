@@ -71,8 +71,8 @@ public class MinimalWordCount {
     // the input text (a set of Shakespeare's texts).
 
     // This example reads a public data set consisting of the complete works of Shakespeare.
-    p.apply(TextIO.read().from("gs://apache-beam-samples/shakespeare/*"))
-
+//    p.apply(TextIO.read().from("gs://apache-beam-samples/shakespeare/*"))
+      p.apply(TextIO.read().from("word-count-beam/text/test.txt"))
      // Concept #2: Apply a ParDo transform to our PCollection of text lines. This ParDo invokes a
      // DoFn (defined in-line) on each element that tokenizes the text line into individual words.
      // The ParDo returns a PCollection<String>, where each element is an individual word in
